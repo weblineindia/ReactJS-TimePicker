@@ -1,0 +1,14 @@
+@import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
+
+.form-control {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+.error-text{
+  color: red;
+}
