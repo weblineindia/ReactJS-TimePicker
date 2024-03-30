@@ -48,22 +48,25 @@ import React ,{ Component } from 'react';
 import TimePicker from 'react-weblineindia-time-picker'
 
 class Test extends Component {
-    constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
-      value:''
+      date: null 
     };
-    render(){
+  }
+
+  render() {
     return (
       <div>
-        <TimePicker
-         value={this.state.value}
-         id="time"
-         placeholder="Time picker"
+        <Calendar
+          id="time24" value={this.state.date} onChange={(e) => this.setState({ date: e.value })} showTime showSeconds
         />
       </div>
-    )}
+    );
+  }
 }
+
+export default Test;
 ```
 ## Available Props
 | Prop | Type | default | Description |

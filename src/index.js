@@ -1,4 +1,4 @@
-/**eslint-disabled */
+
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
@@ -255,7 +255,6 @@ import 'moment/min/locales';
       this.updateInputfield(this.props.value);
     }
     moment().locale("it");
-    console.log(moment.weekdays());
     this.setState(
       {
         localeData: {
@@ -1299,7 +1298,7 @@ import 'moment/min/locales';
   validateMinute(minute, value) {
     let valid = true;
     let valueDateString = value ? value.toDateString() : null;
-
+    
     if (
       this.props.minDate &&
       valueDateString &&
@@ -1316,7 +1315,7 @@ import 'moment/min/locales';
       this.props.maxDate &&
       valueDateString &&
       this.props.maxDate.toDateString() === valueDateString
-    ) {
+      ) {
       if (value.getHours() === this.props.maxDate.getHours()) {
         if (this.props.maxDate.getMinutes() < minute) {
           valid = false;
@@ -1326,7 +1325,7 @@ import 'moment/min/locales';
 
     return valid;
   }
-
+ 
   validateSecond(second, value) {
     let valid = true;
     let valueDateString = value ? value.toDateString() : null;
@@ -1405,10 +1404,10 @@ import 'moment/min/locales';
 
   updateTime(event, hour, minute, second, millisecond) {
     let newDateTime =
-      this.props.value && this.props.value instanceof Date
-        ? new Date(this.props.value)
-        : new Date();
-
+    this.props.value && this.props.value instanceof Date
+    ? new Date(this.props.value)
+    : new Date();
+    
     newDateTime.setHours(hour);
     newDateTime.setMinutes(minute);
     newDateTime.setSeconds(second);
